@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>MersufBT Commands</title>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+				font-family: Arial, sans-serif;
+				color: white;
+			}
+
+			/* Background gif setup */
+			.background-video {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				z-index: -1;
+			}
+
+			/* Main content container */
+			.content {
+				position: relative;
+				z-index: 2;
+				padding: 20px;
+				max-width: 1200px;
+				margin: 0 auto;
+				color: white;
+			}
+
+			/* Header animation */
+			h1 {
+				text-align: center;
+				font-size: 48px;
+				margin: 20px 0;
+				background-image: url('https://cdn.7tv.app/emote/668d7bdbcbd0042ec4e102ed/4x.webp');
+				background-size: cover;
+				background-position: center;
+				-webkit-background-clip: text;
+				background-clip: text;
+				color: transparent;
+				animation: colorChange 5s infinite alternate;
+			}
+
+			/* Text color animation */
+			@keyframes colorChange {
+				0% {
+					filter: drop-shadow(rgb(212, 0, 255) 1px 1px 3px);
+				}
+				50% {
+					filter: drop-shadow(rgb(0, 212, 255) 1px 1px 3px);
+				}
+				100% {
+					filter: drop-shadow(rgb(0, 255, 127) 1px 1px 3px);
+				}
+			}
+
+			/* Mersufy color effect */
+			.mersufy-name {
+				background-image: url('https://cdn.7tv.app/emote/66a5ac21f75366de4a69fe0b/1x.webp');
+				background-size: cover;
+				background-position: center;
+				-webkit-background-clip: text;
+				background-clip: text;
+				color: transparent;
+				animation: colorChange2 5s infinite alternate;
+				font-size: 22px;
+			}
+
+			@keyframes colorChange2 {
+				0% {
+					filter: drop-shadow(rgb(255, 0, 122) 2px 2px 4px);
+				}
+				50% {
+					filter: drop-shadow(rgb(255, 122, 0) 2px 2px 4px);
+				}
+				100% {
+					filter: drop-shadow(rgb(255, 0, 122) 2px 2px 4px);
+				}
+			}
+
+			/* Table styling */
+			table {
+				width: 100%;
+				margin-bottom: 40px;
+				border-collapse: collapse;
+				background-color: rgba(0, 0, 0, 0.6);
+				border-radius: 10px;
+				overflow: hidden;
+			}
+
+			th,
+			td {
+				padding: 15px;
+				text-align: left;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.4); /* белые линии */
+				border-right: 1px solid rgba(255, 255, 255, 0.4); /* белые линии */
+			}
+
+			th {
+				background-color: rgba(255, 255, 255, 0.1);
+				font-size: 18px;
+			}
+
+			td {
+				font-size: 16px;
+			}
+
+			tr:last-child td {
+				border-bottom: none;
+			}
+
+			/* White line between columns */
+			th:last-child,
+			td:last-child {
+				border-right: none;
+			}
+
+			/* Footer styling */
+			.footer {
+				text-align: center;
+				padding: 30px 0; /* увеличил отступ */
+				font-size: 22px; /* увеличил размер */
+				color: white; /* изменил цвет на белый */
+			}
+
+			.footer a {
+				color: #00d4ff;
+				text-decoration: none;
+			}
+
+			.footer a:hover {
+				text-decoration: underline;
+			}
+
+			.footer .mersufy-link {
+				background-image: url('https://cdn.7tv.app/emote/66a5ac21f75366de4a69fe0b/1x.webp');
+				background-size: cover;
+				background-position: center;
+				-webkit-background-clip: text;
+				background-clip: text;
+				color: transparent;
+				animation: colorChange2 5s infinite alternate;
+				font-size: 28px; /* увеличил шрифт для ссылки */
+			}
+
+			/* Reduced spacing between headers and tables */
+			h2 {
+				margin-bottom: 10px; /* уменьшил отступ до таблицы */
+				margin-top: 30px; /* сохранил отступ ��верху */
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Background gif -->
+		<img class="background-video" src="main/webm.gif" alt="Background GIF" />
+
+		<!-- Main content -->
+		<div class="content">
+			<!-- Title -->
+			<h1>MersufBT Commands</h1>
+
+			<!-- Join and Part Commands Table -->
+			<h2>Join and Part:</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Command Name</th>
+						<th>Aliases</th>
+						<th>Cooldown</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>?Join</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Join the user's channel.</td>
+					</tr>
+					<tr>
+						<td>?Part</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Leave the user's channel.</td>
+					</tr>
+					<tr>
+						<td>?Ping</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Pong.</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<!-- Game Commands Table -->
+			<h2>Game:</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Command Name</th>
+						<th>Aliases</th>
+						<th>Cooldown</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>?Fruit</td>
+						<td></td>
+						<td>1 Seconds</td>
+						<td>A game where you randomly collect fruits.</td>
+					</tr>
+					<tr>
+						<td>?Sell [amount]</td>
+						<td></td>
+						<td>1 Seconds</td>
+						<td>Sell a specified number of each fruit and earn coins.</td>
+					</tr>
+					<tr>
+						<td>?Gamba [amount]</td>
+						<td></td>
+						<td>1 Seconds</td>
+						<td>Gamble with your fruits. Chance to gain or lose fruits.</td>
+					</tr>
+					<tr>
+						<td>?Stats</td>
+						<td></td>
+						<td>1 Seconds</td>
+						<td>Show your current fruits, coins, and ranking.</td>
+					</tr>
+					<tr>
+						<td>?Leaderboard</td>
+						<td></td>
+						<td>1 Seconds</td>
+						<td>Show the top 10 users by coins.</td>
+					</tr>
+					<tr>
+						<td>?Rankup</td>
+						<td></td>
+						<td>1 Seconds</td>
+						<td>Upgrade your rank by spending coins.</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2>7tv:</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Command Name</th>
+						<th>Aliases</th>
+						<th>Cooldown</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>?7tvu [username]</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Displays information about a 7TV user.</td>
+					</tr>
+					<tr>
+						<td>?7tsa [username]</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Get the 7TV subscription age of a user.</td>
+					</tr>
+					<tr>
+						<td>?Set [username]</td>
+						<td>7tvset</td>
+						<td>3 Seconds</td>
+						<td>Shows emote set info</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2>User and Channel Information:</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Command Name</th>
+						<th>Aliases</th>
+						<th>Cooldown</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>?User [username]</td>
+						<td>u</td>
+						<td>3 Seconds</td>
+						<td>Provides information about a Twitch user.</td>
+					</tr>
+					<tr>
+						<td>?Uid [username]</td>
+						<td>id</td>
+						<td>3 Seconds</td>
+						<td>Retrieves the user ID of a specified user.</td>
+					</tr>
+					<tr>
+						<td>?Followage [username]</td>
+						<td>fa</td>
+						<td>3 Seconds</td>
+						<td>Shows how long a user has been following the user.</td>
+					</tr>
+					<tr>
+						<td>?Subage [username]</td>
+						<td>sa</td>
+						<td>3 Seconds</td>
+						<td>Shows how long a user has been subscribed to someone.</td>
+					</tr>
+					<tr>
+						<td>?Color [username]</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Gets the color of a user in the chat.</td>
+					</tr>
+					<tr>
+						<td>?Pfp [username]</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Gets the profile picture URL of a Twitch user and 7TV.</td>
+					</tr>
+					<tr>
+						<td>?Banner [username]</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Fetches the banner image of a Twitch user.</td>
+					</tr>
+					<tr>
+						<td>?Accage [username]</td>
+						<td>age</td>
+						<td>3 Seconds</td>
+						<td>Displays the account age of a Twitch user.</td>
+					</tr>
+					<tr>
+						<td>?Badge [username]</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Displays the user's Twitch account badge.</td>
+					</tr>
+					<tr>
+						<td>?Chatters [username]</td>
+						<td>ch</td>
+						<td>3 Seconds</td>
+						<td>Displays information about chatters in the channel.</td>
+					</tr>
+					<tr>
+						<td>?Artists [username]</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Displays a list of artists for a user or the channel.</td>
+					</tr>
+					<tr>
+						<td>?Founders [username]</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Displays information about channel founders.</td>
+					</tr>
+					<tr>
+						<td>?Mods [username]</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Displays a list of mods for a user or the channel.</td>
+					</tr>
+					<tr>
+						<td>?Vips [username]</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Displays a list of VIPs for a user or the channel.</td>
+					</tr>
+					<tr>
+						<td>?Preview [username]</td>
+						<td>prev</td>
+						<td>3 Seconds</td>
+						<td>Gets the stream preview URL of a specified channel.</td>
+					</tr>
+					<tr>
+						<td>?Roles [username]</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Gets the roles of a user in the channel.</td>
+					</tr>
+					<tr>
+						<td>?Streaminfo [username]</td>
+						<td>si</td>
+						<td>3 Seconds</td>
+						<td>Provides information about a Twitch user's stream.</td>
+					</tr>
+					<tr>
+						<td>?Team [team name]</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Retrieves the list of users in a specified Twitch team.</td>
+					</tr>
+					<tr>
+						<td>?Name [username]</td>
+						<td>valid</td>
+						<td>3 Seconds</td>
+						<td>Checks if a specified Twitch username is available.</td>
+					</tr>
+					<tr>
+						<td>?Mc [username] [channel]</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Displays the duration a user has been a mod in a channel.</td>
+					</tr>
+					<tr>
+						<td>?Vc [username] [channel]</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Displays the duration a user has been a VIP in a channel.</td>
+					</tr>
+					<tr>
+						<td>?Currency <amount> [from_currency] to [to_currency]</td>
+						<td>cur, money</td>
+						<td>3 Seconds</td>
+						<td>Convert a specified amount of one currency to another.</td>
+					</tr>
+					<tr>
+						<td>?Crypto [cryptocurrency]</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Fetches the latest price of a cryptocurrency.</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2>Utility:</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Command Name</th>
+						<th>Aliases</th>
+						<th>Cooldown</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>?Ascii [emote 7tv][sub emote #channel]</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Get ASCII art for an emote.</td>
+					</tr>
+					<tr>
+						<td>?Chatstats [username]</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Retrieves the top 10 chatters from a specified channel.</td>
+					</tr>
+					<tr>
+						<td>?Elo</td>
+						<td>faceit</td>
+						<td>3 Seconds</td>
+						<td>Retrieves the ELO stats of a specified Faceit user.</td>
+					</tr>
+					<tr>
+						<td>?Uptime</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Displays the bot's uptime.</td>
+					</tr>
+					<tr>
+						<td>?Coin</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Flips a coin.</td>
+					</tr>
+					<tr>
+						<td>?Dice</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Rolls a 6-sided die.</td>
+					</tr>
+					<tr>
+						<td>?Ct [username]</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Checks how many channels a bot is connected to on Twitch.</td>
+					</tr>
+					<tr>
+						<td>?Hug</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Hug somebody 🤗</td>
+					</tr>
+					<tr>
+						<td>?Cat</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Sends a random cat image 🐱</td>
+					</tr>
+					<tr>
+						<td>?Dog</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Sends a random dog image 🐶</td>
+					</tr>
+					<tr>
+						<td>?Duck</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Sends a random duck image 🦆</td>
+					</tr>
+					<tr>
+						<td>?Hug</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Hug somebody 🤗</td>
+					</tr>
+					<tr>
+						<td>?Play</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>!play</td>
+					</tr>
+					<tr>
+						<td>?Math</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Evaluates a mathematical expression and sends the result.</td>
+					</tr>
+					<tr>
+						<td>?Statsemotes [username]</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>
+							Retrieves the top 10 most used 7TV emotes from a specified
+							channel.
+						</td>
+					</tr>
+					<tr>
+						<td>?Topbots</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Retrieves the top 10 bots online on Twitch.</td>
+					</tr>
+					<tr>
+						<td>?Topgames</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Retrieves the top 5 currently streamed games on Twitch.</td>
+					</tr>
+					<tr>
+						<td>?Vanity [username]</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Vanity URL for the specified username.</td>
+					</tr>
+					<tr>
+						<td>?Song</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Get the current song playing on Last.fm.</td>
+					</tr>
+					<tr>
+						<td>?Link [Last.fm account]</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Link your Last.fm account to your Twitch account.</td>
+					</tr>
+					<tr>
+						<td>?Weather [city]</td>
+						<td>temp</td>
+						<td>3 Seconds</td>
+						<td>Get current weather.</td>
+					</tr>
+					<tr>
+						<td>?Setlocation [city]</td>
+						<td></td>
+						<td>3 Seconds</td>
+						<td>Set a location for future weather updates.</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<!-- Footer -->
+			<div class="footer">
+				Created by
+				<a href="https://twitch.tv/Mersufy" target="_blank" class="mersufy-link"
+					>Mersufy</a
+				>
+			</div>
+		</div>
+	</body>
+</html>
